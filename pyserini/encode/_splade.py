@@ -42,7 +42,7 @@ class SpladeQueryEncoder(QueryEncoder):
         for _tok_weight in tok_weights:
             _weights = {}
             for token, weight in _tok_weight.items():
-                weight_quanted = round(weight / self.weight_range * self.quant_range)
-                _weights[token] = weight_quanted
+                # weight_quanted = round(weight / self.weight_range * self.quant_range)
+                _weights[token] = weight
             to_return.append(_weights)
         return to_return
