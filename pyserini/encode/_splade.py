@@ -12,6 +12,7 @@ class SpladeQueryEncoder(QueryEncoder):
         self.model.to(self.device)
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name or model_name_or_path)
         self.reverse_voc = {v: k for k, v in self.tokenizer.vocab.items()}
+        print("Prithiviraj")
         self.weight_range = 5
         self.quant_range = 256
 
